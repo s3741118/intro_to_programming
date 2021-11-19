@@ -1,4 +1,4 @@
-def rejection_sampling(n):
+def estimate_pi(N):
     import random
     range_of_random_point = range(0, n, 1)
     list1 = []
@@ -8,8 +8,7 @@ def rejection_sampling(n):
         if x1 * x1 + y1 * y1 < 1:
             list1.append(x1)
             list1.append(y1)
-    print(len(list1)/2)
-
-
-n = int(input('please enter n random number: '))
-print(rejection_sampling(n))
+        estimate_pi = 4 * 1/2 * len(list1)/N
+    print('The number of point inside of circle is ', len(list1) / 2)
+    print('The input N random point is: ', N)
+    return estimate_pi
