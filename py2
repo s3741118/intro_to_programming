@@ -1,0 +1,15 @@
+def rejection_sampling(n):
+    import random
+    range_of_random_point = range(0, n, 1)
+    list1 = []
+    for i in range_of_random_point:
+        x1 = random.uniform(-1, 1)
+        y1 = random.uniform(-1, 1)
+        if x1 * x1 + y1 * y1 < 1:
+            list1.append(x1)
+            list1.append(y1)
+    print(len(list1)/2)
+
+
+n = int(input('please enter n random number: '))
+print(rejection_sampling(n))
